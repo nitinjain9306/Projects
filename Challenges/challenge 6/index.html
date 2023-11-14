@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge 6 - Create a navbar using flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            height: 80px;
+            background-color: aqua;
+        }
+        nav img{
+            height: 52px;
+            width: 165px;
+            position: absolute;
+            margin: 15px 65px;
+        }
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            gap: 45px;
+            padding: 30px;
+        }
+        ul li{
+            list-style: none;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="">
+            <ul>
+                <li>Products</li>
+                <li>Pricing</li>
+                <li>Resources</li>
+                <li>About us</li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
