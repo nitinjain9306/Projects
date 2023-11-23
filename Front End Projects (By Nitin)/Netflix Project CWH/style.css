@@ -7,26 +7,33 @@
     font-family: "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
 }
 
-body{
+body {
     background-color: black;
 }
 
 .main {
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url("assets/images/bg.jpg");
-    background-position: center center;
-    background-size: max(1200px, 100vw);
-    background-repeat: no-repeat;
     position: relative;
 }
 
-.main .box {
+.m1 {
     height: 100vh;
-    width: 100%;
-    opacity: 0.50;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url("https://assets.nflxext.com/ffe/siteui/vlv3/d1532433-07b1-4e39-a920-0f08b81a489e/67033404-2df8-42e0-a5a0-4c8288b4da2c/IN-en-20231120-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+}
+
+.main .box {
+    /* height: 100vh;
+    width: 100%; */
+    opacity: 0.40;
     background-color: black;
     position: absolute;
     top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 nav {
@@ -38,7 +45,7 @@ nav {
     height: 90px;
 }
 
-nav div{
+nav div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +62,7 @@ nav button {
     z-index: 10;
 }
 
-.hero{
+.hero {
     height: calc(100% - 98px);
     color: white;
     /* font-family: "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif; */
@@ -70,40 +77,34 @@ nav button {
     text-align: center;
 }
 
-.hero > :nth-child(1){
+.hero> :nth-child(1) {
     /* font-family: 'Poppins', sans-serif; */
     font-size: 48px;
     font-weight: 900;
     margin-bottom: 15px;
 }
 
-.hero > :nth-child(2){
+.hero> :nth-child(2) {
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 25px;
 }
 
-.hero > :nth-child(3){
+.hero> :nth-child(3) {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 15px;
     font-weight: 400;
 }
 
-.hero > :nth-child(4){
+.hero> :nth-child(4) {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 7px;
 }
 
-.seperation{
-    height: 8px;
-    background-color: rgb(35, 35, 35);
-    filter: brightness(2);
-}
-
-.btn{
+.btn {
     padding: 6.5px 15px;
     font-size: 16px;
     font-weight: 400;
@@ -118,20 +119,19 @@ nav button {
     gap: 10px;
 }
 
-.lang{
-    
+.lang {
     padding: 4.5px 10px;
 }
 
-.btn-red{
-    background-color: rgb(229,9,20);
+.btn-red {
+    background-color: rgb(229, 9, 20);
     border: none;
     padding: 10px 25px;
     font-size: 24px;
     font-weight: 600;
 }
 
-.main input{
+.main input {
     font-size: 16px;
     font-weight: 400;
     background-color: rgba(23, 23, 23, 0.7);
@@ -141,49 +141,66 @@ nav button {
     color: white;
 }
 
-::placeholder{
+::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
-.btn-red-sm{
-    background-color: rgb(229,9,20);
+
+.btn-red-sm {
+    background-color: rgb(229, 9, 20);
     font-size: 14px;
     font-weight: 500;
     border: none;
     margin-left: 16px;
 }
 
+.seperation {
+    height: 8px;
+    background-color: rgb(35, 35, 35);
+    filter: brightness(1);
+}
+
 /* section 1st starts here */
 
-.first{
+.first {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 70vw;
-    margin: 70px auto;
+    max-width: 75vw;
+    margin: 65px auto;
     color: #fff;
-    
-}
-
-.sec1Img{
+    gap: 30px;
     position: relative;
 }
 
-.sec1Img img{
+.sec1Img {
     position: relative;
-    right: -30px;
+}
+
+.sec1Img img {
+    position: relative;
     z-index: 10;
-    width: 38vw;
+    width: 100%;
 }
 
-.sec1Img video{
+.sec1vid {
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
     position: absolute;
-    width: 33vw;
-    top: 80px;
-    object-fit: contain;
-    right: -30px;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.first .fhead{
+.sec1Img video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.first .fhead {
     position: relative;
     left: -15px;
     display: flex;
@@ -191,12 +208,12 @@ nav button {
     gap: 16px;
 }
 
-.first .fhead :nth-child(1){
+.first .fhead :nth-child(1) {
     font-size: 48px;
     font-weight: 900;
 }
 
-.first .fhead :nth-child(2){
+.first .fhead :nth-child(2) {
     font-size: 24px;
     font-weight: 400;
     width: 35vw;
@@ -204,50 +221,56 @@ nav button {
 
 /* section 2 starts here */
 
-.second{
+.second {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sec2Img{
+.sec2Img img {
+    width: 100%;
 }
-
 
 /* section 3 starts here */
 
-.third{
+.third {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 75vw;
     margin: 70px auto;
     color: #fff;
+    gap: 16px;
 }
 
-.sec3Img{
+.sec3Img {
     position: relative;
-    overflow: hidden;
 }
 
-.sec3Img img{
+.sec3Img img {
     position: relative;
-    right: -20px;
     z-index: 10;
-    width: 35vw;
-    -webkit-text-stroke: #fff;
+    width: 100%;
 }
 
-
-.sec3Img video{
+.sec3vid {
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 63%;
+    max-height: 47%;
     position: absolute;
-    width: 33vw;
-    top: 39px;
-    object-fit: cover;
-    right: -83px;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.third .thead{
+.sec3Img video {
+    width: 100%;
+}
+
+.third .thead {
     position: relative;
     left: -15px;
     display: flex;
@@ -255,31 +278,37 @@ nav button {
     gap: 16px;
 }
 
-.third .thead :nth-child(1){
+.third .thead :nth-child(1) {
     font-size: 48px;
     font-weight: 900;
 }
 
-.third .thead :nth-child(2){
+.third .thead :nth-child(2) {
     font-size: 24px;
     font-weight: 400;
     width: 37vw;
 }
 
+/* section 4 starts here */
+
+.sec4Img img {
+    width: 100%;
+}
+
 /* this is the faq section */
 
-.faq{
+.faq {
     color: white;
 }
 
-.faq h2{
+.faq h2 {
     text-align: center;
     font-size: 48px;
     font-weight: 900;
     padding: 60px 0 25px 0;
 }
 
-.faq-box{
+.faq-box {
     background-color: rgb(45, 45, 45);
     padding: 24px;
     display: flex;
@@ -292,23 +321,24 @@ nav button {
     cursor: pointer;
 }
 
-.faq-box:hover{
-    background-color: rgba(65, 65, 65,1);
+.faq-box:hover {
+    background-color: rgba(65, 65, 65, 1);
 }
 
-.faq-end{
+.faq-end {
     text-align: center;
     padding: 40px 0 70px 0;
     display: flex;
+    margin: auto;
     flex-direction: column;
     gap: 16px;
 }
 
-.faq-end > :nth-child(1){
+.faq-end> :nth-child(1) {
     font-size: 20px;
 }
 
-.faq-end :nth-child(2){
+.faq-end :nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -317,44 +347,211 @@ nav button {
 
 /* this is the footer part. */
 
-footer{
+footer {
     color: rgba(255, 255, 255, 0.7);
     max-width: 75vw;
     margin: auto;
-    padding: 65px 0 55px 0;
+    padding: 55px 0 65px 0;
 }
 
-footer .question{
+footer .question {
     padding: 0 0 30px 0;
 }
-.footer{
+
+.footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.footer-item{
+.footer-item {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
-.footer-item a{
+.footer-item a {
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     text-decoration: underline;
 }
 
-.end{
+.end {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin: 25px 0;
+    margin: 25px 0 0 0;
 }
 
-.end button{
+.end button {
     width: 123px;
 }
 
-.end div{
+.end div {
     font-size: 14px;
+}
+
+/* this is for mobile interface */
+
+@media screen and (min-width:300px) and (max-width:1200px) {
+    
+    .m1{
+        height: 60vh;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),url("https://assets.nflxext.com/ffe/siteui/vlv3/d1532433-07b1-4e39-a920-0f08b81a489e/67033404-2df8-42e0-a5a0-4c8288b4da2c/IN-en-20231120-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+        background-position: center left;
+        background-size: cover;
+    }
+
+    .main .box {
+        height: 60vh;
+    }
+
+    nav {
+        max-width: 90vw;
+        height: 80px;
+    }
+
+    nav img {
+        width: 95px;
+    }
+
+    nav .lang {
+        padding: 6px 11px;
+    }
+
+    nav .lang span {
+        display: none;
+    }
+
+    .hero {
+        padding: 0 30px;
+        margin: auto;
+        top: 15px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(4) {
+        flex-direction: column;
+    }
+
+    .main input {
+        padding: 14px 70px 14px 14px;
+    }
+
+    .btn-red{
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    .first {
+        flex-wrap: wrap;
+        text-align: center;
+        max-width: 90vw;
+    }
+
+    .sec1Img img {
+        right: 0;
+        width: 100%;
+    }
+
+    .sec1Img video {
+        width: 100%;
+    }
+
+    .first .fhead{
+        left: 0;
+    }
+
+    .first .fhead :nth-child(1) {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .first .fhead :nth-child(2) {
+        font-size: 18px;
+        width: auto;
+    }
+
+    .second{
+        width: 80vw;
+    }
+
+    .third {
+        flex-wrap: wrap;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .third .thead{
+        left: 0;
+    }
+
+    .third .thead :nth-child(1) {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .third .thead :nth-child(2) {
+        font-size: 18px;
+        width: auto;
+    }
+
+    .second,
+    .fourth {
+        flex-direction: column-reverse;
+    }
+
+    .faq h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .faq-box {
+        font-size: 18px;
+        max-width: 75vw;
+        padding: 20px;
+    }
+
+    .faq-box svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .faq-end{
+        width: 80vw;
+        padding: 40px 0 60px 0;
+    }
+
+    .faq-end> :nth-child(1){
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+    .faq-end> :nth-child(2) {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer {
+        max-width: 100vw;
+        padding: 25px 0 35px 0;
+        margin: 0 25px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        justify-content: space-between;
+    }
 }
